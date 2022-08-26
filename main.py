@@ -351,15 +351,13 @@ if __name__ == "__main__":
     demo = G_2048(720, 480)
     @demo.event
     def on_key_press(symbol, modifiers):
-        if(symbol == 100):
+        if(symbol == 100 or symbol == 65363):
             demo.move(1)
-        elif(symbol == 97):
-
+        elif(symbol == 97 or symbol == 65361):
             demo.move(2)
-        elif(symbol == 119):
+        elif(symbol == 119 or symbol == 65362):
             demo.move(3)
-
-        elif(symbol == 115):
+        elif(symbol == 115 or symbol == 65364):
             demo.move(4)
     
     pyglet.clock.schedule_interval(demo.update, 1/100)
